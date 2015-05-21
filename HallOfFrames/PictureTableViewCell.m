@@ -23,6 +23,7 @@
 {
     self.centerImage.image = self.picture.image;
     self.contentView.backgroundColor = self.picture.frameColor;
+    self.accessoryView.backgroundColor = self.picture.frameColor;
     NSLog(@"%@", self.picture.frameColor.description);
 }
 
@@ -31,6 +32,7 @@
 -(void)colorSelectionViewController:(id)viewController didSelectColor:(UIColor *)color {
 
     self.contentView.backgroundColor = color;
+    self.accessoryView.backgroundColor = self.picture.frameColor;
     self.picture.frameColor = color;
 }
 

@@ -11,11 +11,12 @@
 #import "PictureTableViewCell.h"
 #import "ColorSelectionViewController.h"
 
-@interface MainViewController () <PictureTableViewCellDelegate,UITableViewDataSource, UITableViewDelegate>
+@interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property NSMutableArray *pictures;
+@property NSIndexPath *previouslySelected;
 @end
 
 @implementation MainViewController
@@ -56,6 +57,10 @@
 
     ColorSelectionViewController *destinationVC = segue.destinationViewController;
     destinationVC.delegate = cell;
+    if (self.previouslySelected) {
+        [self.tableView reloadRowsAtIndexPaths:@[self.previouslySelected] withRowAnimation:UITableViewRowAnimationNone];
+    }
+    self.previouslySelected = indexPath;
 }
 
 

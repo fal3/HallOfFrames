@@ -10,18 +10,18 @@
 #import "Picture.h"
 #import "ColorSelectionViewController.h"
 
-@protocol PictureTableViewCellDelegate <NSObject>
-
-//methods
-
-
-
-@end
+//@protocol PictureTableViewCellDelegate <NSObject>
+//
+////methods
+//
+//
+//
+//@end
 
 @interface PictureTableViewCell : UITableViewCell <ColorSelectionViewControllerDelegate>
 
 @property Picture *picture;
-@property id<PictureTableViewCellDelegate>delegate;
+//@property id<PictureTableViewCellDelegate>delegate;
 
 -(void)setup;
 
