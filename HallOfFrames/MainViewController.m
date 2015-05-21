@@ -9,7 +9,7 @@
 #import "MainViewController.h"
 #import "Picture.h"
 #import "PictureTableViewCell.h"
-
+#import "ColorSelectionViewController.h"
 
 @interface MainViewController () <PictureTableViewCellDelegate,UITableViewDataSource, UITableViewDelegate>
 
@@ -25,10 +25,10 @@
     //appending images to an array
     [super viewDidLoad];
     self.pictures = [NSMutableArray new];
-    NSArray *picNames = @[@"beyonce", @"drake",@"max",@"miley",@"sasha"];
+    NSArray *picNames = @[@"beyonce", @"drake",@"Max",@"miley",@"sasha"];
     for (NSString *pic in picNames) {
         UIImage *image = [UIImage imageNamed:pic];
-        Picture *picture = [[Picture alloc]initWithImage:image withFrameColor:[UIColor redColor]];
+        Picture *picture = [[Picture alloc]initWithImage:image withFrameColor:[UIColor clearColor]];
         [self.pictures addObject:picture];
     }
 
@@ -39,7 +39,7 @@
     PictureTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PictureCell" forIndexPath:indexPath];
     Picture *picture = [self.pictures objectAtIndex:indexPath.row];
     cell.picture = picture;
-    [cell setCenterImage];
+    [cell setup];
 
     return cell;
 }
@@ -49,7 +49,20 @@
     return self.pictures.count;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    PictureTableViewCell *cell = (PictureTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+
+    ColorSelectionViewController *destinationVC = segue.destinationViewController;
+    destinationVC.delegate = cell;
+}
 
 
-
+//-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+//
+//    NSLog(@"%@", [self.tableView indexPathsForSelectedRows]);
+//    [self.tableView reloadRowsAtIndexPaths:[self.tableView indexPathsForSelectedRows] withRowAnimation:UITableViewRowAnimationAutomatic];
+//}
+//
 @end

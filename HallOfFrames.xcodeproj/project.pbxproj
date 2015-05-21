@@ -16,6 +16,7 @@
 		D094868D1B0D31AB00F63F85 /* HallOfFramesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D094868C1B0D31AB00F63F85 /* HallOfFramesTests.m */; };
 		D09486981B0D337400F63F85 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = D09486971B0D337400F63F85 /* Picture.m */; };
 		D094869B1B0D3ADC00F63F85 /* PictureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D094869A1B0D3ADC00F63F85 /* PictureTableViewCell.m */; };
+		FA7CC2C71B0D4EBA00A589E4 /* ColorSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7CC2C61B0D4EBA00A589E4 /* ColorSelectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		D09486971B0D337400F63F85 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
 		D09486991B0D3ADC00F63F85 /* PictureTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureTableViewCell.h; sourceTree = "<group>"; };
 		D094869A1B0D3ADC00F63F85 /* PictureTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureTableViewCell.m; sourceTree = "<group>"; };
+		FA7CC2C51B0D4EBA00A589E4 /* ColorSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSelectionViewController.h; sourceTree = "<group>"; };
+		FA7CC2C61B0D4EBA00A589E4 /* ColorSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSelectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				D09486991B0D3ADC00F63F85 /* PictureTableViewCell.h */,
 				D094869A1B0D3ADC00F63F85 /* PictureTableViewCell.m */,
 				D094867A1B0D31AB00F63F85 /* Main.storyboard */,
+				FA7CC2C51B0D4EBA00A589E4 /* ColorSelectionViewController.h */,
+				FA7CC2C61B0D4EBA00A589E4 /* ColorSelectionViewController.m */,
 				D09486961B0D337400F63F85 /* Picture.h */,
 				D09486971B0D337400F63F85 /* Picture.m */,
 				D094867D1B0D31AB00F63F85 /* Images.xcassets */,
@@ -234,6 +239,7 @@
 				D09486791B0D31AB00F63F85 /* MainViewController.m in Sources */,
 				D09486761B0D31AB00F63F85 /* AppDelegate.m in Sources */,
 				D09486731B0D31AB00F63F85 /* main.m in Sources */,
+				FA7CC2C71B0D4EBA00A589E4 /* ColorSelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HallOfFrames/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -372,6 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HallOfFrames/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -390,6 +398,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = HallOfFramesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HallOfFrames.app/HallOfFrames";
@@ -405,6 +414,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = HallOfFramesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HallOfFrames.app/HallOfFrames";
@@ -430,6 +440,7 @@
 				D09486921B0D31AB00F63F85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D09486931B0D31AB00F63F85 /* Build configuration list for PBXNativeTarget "HallOfFramesTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +449,7 @@
 				D09486951B0D31AB00F63F85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

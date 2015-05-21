@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Picture.h"
+#import "ColorSelectionViewController.h"
 
 @protocol PictureTableViewCellDelegate <NSObject>
 
@@ -17,11 +18,12 @@
 
 @end
 
-@interface PictureTableViewCell : UITableViewCell
+@interface PictureTableViewCell : UITableViewCell <ColorSelectionViewControllerDelegate>
+
 @property Picture *picture;
 @property id<PictureTableViewCellDelegate>delegate;
 
--(void)setCenterImage;
+-(void)setup;
 
 
 @end

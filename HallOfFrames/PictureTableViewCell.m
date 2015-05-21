@@ -16,11 +16,22 @@
 @property (weak, nonatomic) IBOutlet UIImageView *centerImage;
 
 @end
+
 @implementation PictureTableViewCell
 
--(void)setCenterImage
+-(void)setup
 {
     self.centerImage.image = self.picture.image;
+    self.contentView.backgroundColor = self.picture.frameColor;
+    NSLog(@"%@", self.picture.frameColor.description);
+}
+
+#pragma mark - ColorSelectionViewControl methods
+
+-(void)colorSelectionViewController:(id)viewController didSelectColor:(UIColor *)color {
+
+    self.contentView.backgroundColor = color;
+    self.picture.frameColor = color;
 }
 
 

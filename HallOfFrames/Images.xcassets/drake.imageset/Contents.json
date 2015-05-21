@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "Drake-Leads-Much-Music-Awards-With-Six-Nominations.jpg"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "Drake-Leads-Much-Music-Awards-With-Six-Nominations.jpg"
     },
     {
       "idiom" : "universal",
